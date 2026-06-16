@@ -8,9 +8,9 @@ export function ExperienceSection() {
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Experiencia"
-            title="Um processo direto, colaborativo e orientado a resultado."
-            description="Organizo o trabalho em ciclos curtos: entender o problema, prototipar, implementar, medir e refinar."
+            eyebrow="Experiência"
+            title="Trajetória profissional e acadêmica."
+            description="Experiência iniciada em 2022 na Ironbug Sistemas, com evolução de estagiário para desenvolvedor fullstack júnior."
           />
         </Reveal>
         <div className="mx-auto max-w-3xl">

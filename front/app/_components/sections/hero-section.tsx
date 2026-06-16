@@ -10,27 +10,27 @@ export function HeroSection() {
         <div>
           <Reveal>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
-              Desenvolvedor de software
+              Fullstack Developer | Maringá - PR
             </p>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="max-w-4xl text-5xl font-black leading-[1.03] text-[#FAFAFA] md:text-7xl">
-              Eu crio experiencias web rapidas, claras e memoraveis.
+              Desenvolvo sistemas web corporativos com foco em resultado.
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#A3A3A3] md:text-xl">
-              Sou Hamada, desenvolvedor focado em transformar ideias em
-              interfaces modernas, bem estruturadas e prontas para crescer.
+              Sou Matheus Hamada, desenvolvedor fullstack com experiência em
+              C#, .NET, AngularJS, React, APIs REST e MySQL.
             </p>
           </Reveal>
           <Reveal delay={360}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#projetos"
+                href="#experiencia"
                 className="rounded-full bg-[#8B5CF6] px-7 py-3 text-center text-sm font-bold text-[#FAFAFA] shadow-[0_18px_55px_rgba(139,92,246,0.28)] transition hover:bg-[#A78BFA]"
               >
-                Ver projetos
+                Ver experiência
               </a>
               <a
                 href="#sobre"
@@ -54,10 +54,10 @@ export function HeroSection() {
               </div>
             </div>
             <div className="absolute left-4 top-16 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              Next.js
+              C# .NET
             </div>
             <div className="absolute bottom-14 right-0 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              TypeScript
+              AngularJS
             </div>
           </div>
         </Reveal>

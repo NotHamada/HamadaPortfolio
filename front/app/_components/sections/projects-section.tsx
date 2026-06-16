@@ -9,8 +9,8 @@ export function ProjectsSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Projetos"
-            title="Solucoes digitais com intencao."
-            description="Uma selecao de tipos de projeto que representam meu foco: produtos web organizados, responsivos e pensados para uso real."
+            title="Frentes de atuação no desenvolvimento web."
+            description="Minha experiência profissional abrange sistemas corporativos, integrações, dados, manutenção evolutiva e melhoria contínua de aplicações."
           />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-3">

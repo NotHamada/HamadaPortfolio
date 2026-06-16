@@ -13,23 +13,31 @@ export function ContactSection() {
               Vamos construir algo com impacto?
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#A3A3A3]">
-              Estou aberto a conversas sobre produtos digitais, interfaces,
-              automacoes e ideias que merecem sair do papel.
+              Estou aberto a oportunidades e conversas sobre desenvolvimento
+              fullstack, sistemas web corporativos e integrações.
             </p>
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <a
-                href="mailto:contato@hamada.dev"
+                href="mailto:matheushamada@live.com"
                 className="rounded-full bg-[#8B5CF6] px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:bg-[#A78BFA]"
               >
                 Enviar email
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/in/matheushamada/"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
               >
                 LinkedIn
+              </a>
+              <a
+                href="https://github.com/NotHamada"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
+              >
+                GitHub
               </a>
             </div>
           </div>

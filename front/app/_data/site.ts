@@ -2,96 +2,108 @@ export const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Projetos", href: "#projetos" },
   { label: "Habilidades", href: "#habilidades" },
-  { label: "Experiencia", href: "#experiencia" },
+  { label: "Experiência", href: "#experiencia" },
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "https://github.com", external: true },
-  { label: "LinkedIn", href: "https://www.linkedin.com", external: true },
-  { label: "Email", href: "mailto:contato@hamada.dev" },
+  { label: "GitHub", href: "https://github.com/NotHamada", external: true },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/matheushamada/",
+    external: true,
+  },
+  { label: "Email", href: "mailto:matheushamada@live.com" },
 ];
 
 export const profileHighlights = [
   {
-    kicker: "Produto",
-    title: "Traduzo requisitos em fluxo de uso",
+    kicker: "Fullstack",
+    title: "Experiência real em sistemas corporativos",
     description:
-      "Antes de escrever codigo, procuro entender a jornada, as decisoes do usuario e o que precisa ficar simples.",
+      "Desde 2022, atuo na Ironbug Sistemas desenvolvendo e mantendo aplicações web corporativas.",
   },
   {
-    kicker: "Frontend",
-    title: "Interfaces responsivas e consistentes",
+    kicker: "Backend",
+    title: "C#, .NET, APIs REST e MySQL",
     description:
-      "Componentes bem divididos, estados previsiveis e atencao a performance visual em telas pequenas e grandes.",
+      "Trabalho com implementação de funcionalidades, integração de APIs, modelagem de dados e otimização.",
   },
   {
-    kicker: "Entrega",
-    title: "Organizacao para evoluir sem travar",
+    kicker: "Perfil",
+    title: "Analítico, organizado e colaborativo",
     description:
-      "Estruturo arquivos, dados e estilos de forma clara para que o projeto continue facil de manter.",
+      "Tenho foco em resolução de problemas, comunicação, trabalho em equipe e documentação institucional.",
   },
 ];
 
 export const projects = [
   {
-    type: "Aplicacao web",
-    title: "Dashboard operacional",
+    type: "Sistemas corporativos",
+    title: "Desenvolvimento fullstack",
     description:
-      "Painel responsivo para leitura rapida de indicadores, filtros e acoes prioritarias.",
-    stack: ["Next.js", "TypeScript", "Tailwind"],
+      "Construção e manutenção de funcionalidades para aplicações web usadas em ambiente empresarial.",
+    stack: ["C#", ".NET", "AngularJS"],
   },
   {
-    type: "Landing page",
-    title: "Pagina de conversao",
+    type: "Integrações",
+    title: "APIs REST e dados",
     description:
-      "Experiencia de apresentacao com narrativa visual, secoes objetivas e chamada clara para contato.",
-    stack: ["React", "SEO", "UI"],
+      "Consumo e integração de APIs REST com manipulação, modelagem e consultas em bancos MySQL.",
+    stack: ["REST APIs", "MySQL", "SQL"],
   },
   {
-    type: "Sistema interno",
-    title: "Fluxo administrativo",
+    type: "Qualidade",
+    title: "Correções e performance",
     description:
-      "Interface para tarefas recorrentes, com foco em rapidez, organizacao e reducao de atrito.",
-    stack: ["Forms", "APIs", "UX"],
+      "Atuação em correção de bugs, testes, melhoria de performance e evolução contínua de projetos.",
+    stack: ["Git", "MVC", "React"],
   },
 ];
 
 export const skillGroups = [
   {
+    title: "Backend",
+    items: ["C#", ".NET", "ASP.NET MVC", "REST APIs", "MySQL", "SQL"],
+  },
+  {
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "CSS moderno"],
+    items: ["AngularJS", "React", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Arquitetura",
-    items: ["Componentizacao", "Design responsivo", "Acessibilidade", "SEO"],
+    title: "Fundamentos",
+    items: ["Arquitetura MVC", "Git", "C", "C++", "Excel"],
   },
   {
-    title: "Backend e dados",
-    items: ["Node.js", "REST APIs", "SQL", "Integracoes"],
-  },
-  {
-    title: "Ferramentas",
-    items: ["Git", "ESLint", "Figma", "Deploy"],
+    title: "Competências",
+    items: ["Gestão de Projetos", "Documentação", "Comunicação", "Inglês"],
   },
 ];
 
 export const experience = [
   {
-    period: "Descoberta",
-    title: "Entendimento do objetivo",
+    period: "Ago 2024 - Atual",
+    title: "Desenvolvedor Fullstack Júnior - Ironbug Sistemas",
     description:
-      "Mapeio publico, contexto e prioridades para que a interface comunique o que realmente importa.",
+      "Desenvolvimento e manutenção de sistemas web corporativos com C# (.NET), AngularJS, APIs REST e MySQL, incluindo correções, performance e evolução de projetos.",
   },
   {
-    period: "Construcao",
-    title: "Componentes separados e reutilizaveis",
+    period: "Mar 2022 - Jul 2024",
+    title: "Estagiário de Desenvolvimento - Ironbug Sistemas",
     description:
-      "Divido a pagina em partes pequenas, com dados isolados e responsabilidades claras.",
+      "Apoio no desenvolvimento de aplicações web, correções, testes, implementação de funcionalidades e aprendizado prático em arquitetura MVC e desenvolvimento fullstack.",
   },
   {
-    period: "Refino",
-    title: "Animacoes e acabamento",
+    period: "2021 - 2025",
+    title: "Bacharelado em Ciência da Computação - UEM",
     description:
-      "Uso movimento com proposito para guiar o olhar durante o scroll, sem prejudicar legibilidade.",
+      "Formação acadêmica em Ciência da Computação pela Universidade Estadual de Maringá, complementada por ADS na UniCesumar entre 2021 e 2023.",
   },
+];
+
+export const certifications = [
+  "Take Blip Fullstack Developer",
+  "Impulso Fullstack Developer",
+  "Santander Bootcamp | Fullstack Developer",
+  "Fullstack Developer Banco Carrefour",
+  "Pottencial .NET Developer",
 ];

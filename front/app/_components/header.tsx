@@ -8,7 +8,7 @@ export function Header() {
           href="#inicio"
           className="text-base font-bold tracking-wide text-[#FAFAFA]"
         >
-          Hamada
+          Matheus Hamada
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (

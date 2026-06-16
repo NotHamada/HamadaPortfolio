@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="border-t border-[#171717] bg-[#0A0A0A]">
       <div className="section-shell flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
         <p className="text-sm text-[#A3A3A3]">
-          © 2026 Hamada. Construido com Next.js.
+          © 2026 Matheus Hamada. Construído com Next.js.
         </p>
         <div className="flex flex-wrap gap-5">
           {socialLinks.map((link) => (
