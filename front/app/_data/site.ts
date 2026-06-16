@@ -20,7 +20,7 @@ export const profileHighlights = [
     kicker: "Fullstack",
     title: "Experiência real em sistemas corporativos",
     description:
-      "Desde 2022, atuo na Ironbug Sistemas desenvolvendo e mantendo aplicações web corporativas.",
+      "De 2022 a 2026, atuei na Ironbug Sistemas desenvolvendo e mantendo aplicações web corporativas.",
   },
   {
     kicker: "Backend",
@@ -81,7 +81,7 @@ export const skillGroups = [
 
 export const experience = [
   {
-    period: "Ago 2024 - Atual",
+    period: "Ago 2024 - Jun 2026",
     title: "Desenvolvedor Fullstack Júnior - Ironbug Sistemas",
     description:
       "Desenvolvimento e manutenção de sistemas web corporativos com C# (.NET), AngularJS, APIs REST e MySQL, incluindo correções, performance e evolução de projetos.",

@@ -1,4 +1,5 @@
 import { Reveal } from "../reveal";
+import { AiOutlineDotNet } from "react-icons/ai";
 
 export function HeroSection() {
   return (
@@ -50,7 +51,9 @@ export function HeroSection() {
             <div className="orbital-ring absolute inset-24 rounded-full border border-dashed border-[#FAFAFA]/25" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="grid h-48 w-48 place-items-center rounded-[32px] border border-[#A78BFA]/35 bg-[#0A0A0A] shadow-[0_25px_80px_rgba(167,139,250,0.22)]">
-                <span className="text-6xl font-black text-[#FAFAFA]">H</span>
+                <span className="text-6xl font-black text-[#FAFAFA]">
+                  <AiOutlineDotNet/>
+                </span>
               </div>
             </div>
             <div className="absolute left-4 top-16 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
