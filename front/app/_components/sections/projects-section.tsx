@@ -8,7 +8,7 @@ export function ProjectsSection() {
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Projetos"
+            eyebrow="Atuação profissional"
             title="Frentes de atuação no desenvolvimento web."
             description="Minha experiência profissional abrange sistemas corporativos, integrações, dados, manutenção evolutiva e melhoria contínua de aplicações."
           />

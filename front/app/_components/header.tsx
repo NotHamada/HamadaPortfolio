@@ -10,7 +10,7 @@ export function Header() {
         >
           Matheus Hamada
         </a>
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
@@ -27,6 +27,20 @@ export function Header() {
         >
           Contato
         </a>
+      </nav>
+      <nav
+        aria-label="Navegação pelas seções"
+        className="section-shell flex gap-6 overflow-x-auto border-t border-[#171717] py-3 lg:hidden"
+      >
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="shrink-0 text-sm font-medium text-[#A3A3A3] transition hover:text-[#A78BFA]"
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
     </header>
   );

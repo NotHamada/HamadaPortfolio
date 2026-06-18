@@ -1,6 +1,7 @@
 export const navItems = [
   { label: "Sobre", href: "#sobre" },
-  { label: "Projetos", href: "#projetos" },
+  { label: "Atuação", href: "#projetos" },
+  { label: "Projetos pessoais", href: "#projetos-pessoais" },
   { label: "Habilidades", href: "#habilidades" },
   { label: "Experiência", href: "#experiencia" },
 ];
@@ -57,6 +58,16 @@ export const projects = [
     description:
       "Atuação em correção de bugs, testes, melhoria de performance e evolução contínua de projetos.",
     stack: ["Git", "MVC", "React"],
+  },
+];
+
+export const personalProjects = [
+  {
+    title: "F1Statistics",
+    description:
+      "Projeto pessoal dedicado a reunir e apresentar estatísticas da Fórmula 1, facilitando a consulta e a análise de informações da categoria em uma experiência centralizada.",
+    href: "https://github.com/NotHamada/F1Statistics",
+    tags: ["Fórmula 1", "Estatísticas", "Projeto pessoal"],
   },
 ];
 
