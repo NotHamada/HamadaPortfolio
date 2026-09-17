@@ -1,5 +1,5 @@
 import {Reveal} from "../reveal";
-import {FaLinkedin, FaGithub} from "react-icons/fa6"
+import {FaLinkedin, FaGithub, FaWhatsapp} from "react-icons/fa6"
 
 export function ContactSection() {
     return (
@@ -16,7 +16,7 @@ export function ContactSection() {
                         </h2>
                         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#A3A3A3]">
                             Estou aberto a oportunidades e conversas sobre desenvolvimento
-                            fullstack, sistemas web corporativos e integrações.
+                            fullstack em .NET e PHP, sistemas web corporativos e integrações.
                         </p>
                         <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
                             <a
@@ -40,6 +40,14 @@ export function ContactSection() {
                                 className="flex items-center gap-2 rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
                             >
                               <FaGithub/> GitHub
+                            </a>
+                            <a
+                                href="https://wa.me/5544991170071"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex items-center gap-2 rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
+                            >
+                              <FaWhatsapp/> WhatsApp
                             </a>
                         </div>
                     </div>

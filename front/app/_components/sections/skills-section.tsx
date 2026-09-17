@@ -10,7 +10,7 @@ export function SkillsSection() {
           <SectionHeading
             eyebrow="Habilidades"
             title="Tecnologias e competências do meu dia a dia."
-            description="Stack alinhada ao meu currículo, com foco em C#/.NET, AngularJS, React, APIs REST, MySQL, Git e arquitetura MVC."
+            description="Stack alinhada ao meu currículo, com foco em C#/.NET, PHP, AngularJS, React, APIs REST, MySQL, Git e arquitetura MVC."
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-2">

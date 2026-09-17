@@ -9,8 +9,8 @@ export function AboutSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Sobre mim"
-            title="Fullstack com base sólida em produto, dados e manutenção."
-            description="Atuo no desenvolvimento e na manutenção de sistemas web corporativos, implementando funcionalidades, integrando APIs REST, modelando dados e melhorando a performance de aplicações."
+            title="Fullstack com base sólida em produto, dados e requisitos."
+            description="Atuo no desenvolvimento e na manutenção de sistemas web corporativos em C#/.NET e PHP, implementando funcionalidades, integrando APIs REST, modelando dados e levantando requisitos junto às áreas de negócio."
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">

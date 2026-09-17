@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus Hamada | Fullstack Developer",
+  title: "Matheus Hamada | Full Stack Developer",
   description:
-    "Landing page pessoal de Matheus Hamada, desenvolvedor fullstack com experiência em C#, .NET, AngularJS, React, APIs REST e MySQL.",
+    "Landing page pessoal de Matheus Hamada, desenvolvedor fullstack com experiência em C#, .NET, PHP, AngularJS, React, APIs REST e MySQL.",
 };
 
 export default function RootLayout({

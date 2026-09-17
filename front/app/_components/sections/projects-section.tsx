@@ -10,7 +10,7 @@ export function ProjectsSection() {
           <SectionHeading
             eyebrow="Atuação profissional"
             title="Frentes de atuação no desenvolvimento web."
-            description="Minha experiência profissional abrange sistemas corporativos, integrações, dados, manutenção evolutiva e melhoria contínua de aplicações."
+            description="Minha atuação profissional abrange sistemas corporativos em .NET e PHP, integrações de dados, levantamento de requisitos e melhoria contínua de aplicações."
           />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-3">

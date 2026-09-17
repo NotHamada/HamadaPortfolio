@@ -11,18 +11,18 @@ export function HeroSection() {
         <div>
           <Reveal>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
-              Fullstack Developer | Maringá - PR
+              Full Stack Developer | C# .NET & PHP | Maringá - PR
             </p>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="max-w-4xl text-5xl font-black leading-[1.03] text-[#FAFAFA] md:text-7xl">
-              Desenvolvo sistemas web corporativos com foco em resultado.
+              Desenvolvo sistemas web corporativos em .NET e PHP com foco em resultado.
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#A3A3A3] md:text-xl">
               Sou Matheus Hamada, desenvolvedor fullstack com experiência em
-              C#, .NET, AngularJS, React, APIs REST e MySQL.
+              C#, .NET, PHP, AngularJS, React, APIs REST e MySQL.
             </p>
           </Reveal>
           <Reveal delay={360}>
@@ -60,7 +60,10 @@ export function HeroSection() {
               C# .NET
             </div>
             <div className="absolute bottom-14 right-0 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              AngularJS
+              AngularJS · React
+            </div>
+            <div className="absolute right-4 top-2 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
+              PHP
             </div>
           </div>
         </Reveal>
