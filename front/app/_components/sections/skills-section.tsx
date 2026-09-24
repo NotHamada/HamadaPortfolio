@@ -1,8 +1,5 @@
-import {
-  certifications,
-  skillGroups,
-  stackEcosystems,
-} from "../../_data/site";
+import { certifications } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
 import { SiDotnet, SiNodedotjs, SiReact } from "react-icons/si";
@@ -24,7 +21,7 @@ const ecosystemStyles = {
   },
 } as const;
 
-export function SkillsSection() {
+export function SkillsSection({ dict }: { dict: Dictionary["stack"] }) {
   return (
     <section
       id="stack"
@@ -34,20 +31,20 @@ export function SkillsSection() {
         <Reveal>
           <SectionHeading
             index="02"
-            eyebrow="stack"
-            title="Dois ecossistemas, uma entrega de ponta a ponta."
-            description="C# e .NET para APIs e regras de negócio; React, Next.js, Node.js e NestJS para interfaces e serviços em JavaScript/TypeScript."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-2">
-          {stackEcosystems.map((ecosystem, index) => {
-            const style =
-              ecosystemStyles[ecosystem.id as keyof typeof ecosystemStyles];
+          {(["dotnet", "js"] as const).map((id, index) => {
+            const ecosystem = dict.ecosystems[id];
+            const style = ecosystemStyles[id];
 
             return (
               <Reveal
-                key={ecosystem.id}
+                key={id}
                 delay={index * 140}
                 direction={index === 0 ? "left" : "right"}
               >
@@ -81,7 +78,7 @@ export function SkillsSection() {
         </div>
 
         <div className="mt-6 grid gap-6 md:grid-cols-3">
-          {skillGroups.map((group, index) => (
+          {dict.groups.map((group, index) => (
             <Reveal key={group.title} delay={index * 100}>
               <article className="card h-full p-6">
                 <h3 className="font-mono text-sm text-muted">
@@ -105,7 +102,8 @@ export function SkillsSection() {
         <Reveal delay={160}>
           <div className="card mt-6 flex flex-col gap-5 p-6 md:flex-row md:items-center">
             <h3 className="flex shrink-0 items-center gap-2 font-mono text-sm text-muted">
-              <FaCertificate className="text-amber" aria-hidden /> Certificações
+              <FaCertificate className="text-amber" aria-hidden />{" "}
+              {dict.certifications}
             </h3>
             <ul className="flex flex-wrap gap-2">
               {certifications.map((certification) => (

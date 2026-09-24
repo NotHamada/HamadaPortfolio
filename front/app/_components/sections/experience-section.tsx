@@ -1,4 +1,4 @@
-import { education, experience } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
 
@@ -57,32 +57,36 @@ function Timeline({
   );
 }
 
-export function ExperienceSection() {
+export function ExperienceSection({
+  dict,
+}: {
+  dict: Dictionary["experience"];
+}) {
   return (
     <section id="experiencia" className="py-24 md:py-32">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
             index="03"
-            eyebrow="experiência"
-            title="Trajetória profissional e acadêmica."
-            description="Do estágio em 2022 até a atuação atual: cargos, responsabilidades e a formação que sustenta meu trabalho."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr]">
           <Timeline
-            label="experiencia"
+            label={dict.workLog}
             accent="dotnet"
-            items={experience.map((item) => ({
+            items={dict.jobs.map((item) => ({
               period: item.period,
               title: item.title,
               body: item.description,
             }))}
           />
           <Timeline
-            label="formacao"
+            label={dict.educationLog}
             accent="js"
-            items={education.map((item) => ({
+            items={dict.education.map((item) => ({
               period: item.period,
               title: item.title,
               body: item.institution,

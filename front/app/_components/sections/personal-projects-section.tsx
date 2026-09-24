@@ -1,4 +1,4 @@
-import { personalProjects } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { getStarredRepos } from "../../_lib/github";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
@@ -13,7 +13,11 @@ type DisplayProject = {
   stars?: number;
 };
 
-export async function PersonalProjectsSection() {
+export async function PersonalProjectsSection({
+  dict,
+}: {
+  dict: Dictionary["personalProjects"];
+}) {
   const starredRepos = await getStarredRepos(6);
 
   const displayProjects: DisplayProject[] =
@@ -21,14 +25,14 @@ export async function PersonalProjectsSection() {
       ? starredRepos.map((repo) => ({
           key: repo.fullName,
           title: repo.name,
-          description: repo.description ?? "Repositório sem descrição.",
+          description: repo.description ?? dict.noDescription,
           href: repo.url,
           tags: repo.language
             ? [repo.language, ...repo.topics.slice(0, 2)]
             : repo.topics.slice(0, 3),
           stars: repo.stars,
         }))
-      : personalProjects.map((project) => ({
+      : dict.fallback.map((project) => ({
           key: project.title,
           title: project.title,
           description: project.description,
@@ -42,9 +46,9 @@ export async function PersonalProjectsSection() {
         <Reveal>
           <SectionHeading
             index="05"
-            eyebrow="projetos pessoais"
-            title="Meus repositórios em destaque no GitHub."
-            description="Projetos próprios que marco com estrela no GitHub: uma vitrine que atualizo direto por lá, sem precisar mexer no site."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
 

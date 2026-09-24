@@ -1,3 +1,4 @@
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
@@ -31,7 +32,7 @@ const channels = [
   },
 ];
 
-export function ContactSection() {
+export function ContactSection({ dict }: { dict: Dictionary["contact"] }) {
   return (
     <section id="contato" className="hero-backdrop py-24 md:py-32">
       <div className="section-shell">
@@ -42,23 +43,20 @@ export function ContactSection() {
               <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
               <span className="h-3 w-3 rounded-full bg-[#28c840]" />
               <span className="ml-3 font-mono text-xs text-muted">
-                bash — contato
+                {dict.terminalTitle}
               </span>
             </div>
             <div className="p-8 md:p-12">
               <p className="font-mono text-sm text-muted">
                 <span className="text-node">➜</span>{" "}
-                <span className="text-js">~</span> dotnet run --project
-                contato
+                <span className="text-js">~</span> {dict.command}
               </p>
               <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-fg md:text-6xl">
-                Vamos construir algo{" "}
-                <span className="text-gradient">com impacto?</span>
+                {dict.titleStart}{" "}
+                <span className="text-gradient">{dict.titleHighlight}</span>
               </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-                Estou aberto a oportunidades e conversas sobre desenvolvimento
-                fullstack com .NET, React, Next.js, Node.js e NestJS, sistemas
-                corporativos e integrações.
+                {dict.description}
               </p>
               <ul className="mt-10 grid gap-3 sm:grid-cols-2">
                 {channels.map((channel) => {

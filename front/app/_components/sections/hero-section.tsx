@@ -1,14 +1,9 @@
 import { CodeWindow } from "../code-window";
 import { Reveal } from "../reveal";
 import { StackMarquee } from "../stack-marquee";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 
-const stats = [
-  { value: "4+", label: "anos desenvolvendo sistemas web" },
-  { value: "2º", label: "lugar no Hackathon SECOMP 2024" },
-  { value: "5", label: "certificações full stack e .NET" },
-];
-
-export function HeroSection() {
+export function HeroSection({ dict }: { dict: Dictionary["hero"] }) {
   return (
     <section
       id="inicio"
@@ -22,24 +17,23 @@ export function HeroSection() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-node opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-node" />
               </span>
-              Full Stack Developer · Maringá - PR
+              {dict.badge}
             </p>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="mt-7 font-display text-[2.1rem] font-bold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-[3.4rem] xl:text-6xl">
-              Backend em <span className="text-dotnet">.NET</span>,
+              {dict.backend} <span className="text-dotnet">.NET</span>,
               <br />
-              Frontend em <span className="text-js">React</span>,
+              {dict.frontend} <span className="text-js">React</span>,
               <br />
-              <span className="text-gradient">do banco ao pixel.</span>
+              <span className="text-gradient">{dict.tagline}</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-7 max-w-xl text-lg leading-8 text-muted">
-              Sou <strong className="text-fg">Matheus Hamada</strong>,
-              desenvolvedor fullstack. Construo APIs e sistemas corporativos
-              com C# e .NET e interfaces modernas com React, Next.js, Node.js e
-              NestJS.
+              {dict.introBefore}{" "}
+              <strong className="text-fg">Matheus Hamada</strong>
+              {dict.introAfter}
             </p>
           </Reveal>
           <Reveal delay={360}>
@@ -48,19 +42,19 @@ export function HeroSection() {
                 href="#experiencia"
                 className="rounded-lg bg-gradient-to-r from-dotnet-deep to-dotnet px-7 py-3 text-center text-sm font-bold text-white shadow-[0_18px_50px_-12px_rgba(81,43,212,0.8)] transition hover:brightness-110"
               >
-                Ver experiência
+                {dict.primaryCta}
               </a>
               <a
                 href="#stack"
                 className="rounded-lg border border-line bg-surface/60 px-7 py-3 text-center font-mono text-sm font-semibold text-fg transition hover:border-js/60 hover:text-js"
               >
-                $ ver --stack
+                {dict.secondaryCta}
               </a>
             </div>
           </Reveal>
           <Reveal delay={460}>
             <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-line pt-8">
-              {stats.map((stat) => (
+              {dict.stats.map((stat) => (
                 <div key={stat.label}>
                   <dt className="sr-only">{stat.label}</dt>
                   <dd className="font-display text-3xl font-bold text-fg">
@@ -76,7 +70,7 @@ export function HeroSection() {
         </div>
 
         <Reveal direction="scale" delay={200}>
-          <CodeWindow />
+          <CodeWindow dict={dict.codeWindow} />
         </Reveal>
       </div>
 

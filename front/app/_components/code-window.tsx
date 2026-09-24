@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SiDotnet, SiNestjs, SiReact } from "react-icons/si";
+import type { Dictionary } from "../_i18n/dictionaries/pt";
 
 const files = [
   {
@@ -29,7 +30,7 @@ app.Run();`,
     code: `export default function Portfolio() {
   const stack = ["React", "Next.js", "TypeScript"];
 
-  // Server Component: renderizado no servidor
+  {{serverComponentComment}}
   return (
     <Developer
       name="Matheus Hamada"
@@ -97,10 +98,16 @@ function highlight(line: string) {
   return tokens;
 }
 
-export function CodeWindow() {
+export function CodeWindow({
+  dict,
+}: {
+  dict: Dictionary["hero"]["codeWindow"];
+}) {
   const [active, setActive] = useState(0);
   const file = files[active];
-  const lines = file.code.split("\n");
+  const lines = file.code
+    .replace("{{serverComponentComment}}", dict.serverComponentComment)
+    .split("\n");
 
   return (
     <div className="gradient-border overflow-hidden rounded-2xl bg-surface/90 shadow-[0_40px_120px_-40px_rgba(81,43,212,0.6)] backdrop-blur">
@@ -115,7 +122,7 @@ export function CodeWindow() {
 
       <div
         role="tablist"
-        aria-label="Arquivos de exemplo"
+        aria-label={dict.filesLabel}
         className="flex overflow-x-auto border-b border-line bg-bg/60"
       >
         {files.map((item, index) => {
