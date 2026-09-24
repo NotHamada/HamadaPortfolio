@@ -2,7 +2,7 @@ import { personalProjects } from "../../_data/site";
 import { getStarredRepos } from "../../_lib/github";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
-import { FaStar } from "react-icons/fa6";
+import { FaArrowUpRightFromSquare, FaGithub, FaStar } from "react-icons/fa6";
 
 type DisplayProject = {
   key: string;
@@ -37,55 +37,59 @@ export async function PersonalProjectsSection() {
         }));
 
   return (
-    <section id="projetos-pessoais" className="bg-[#0A0A0A] py-24">
+    <section id="projetos-pessoais" className="py-24 md:py-32">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Projetos pessoais"
+            index="05"
+            eyebrow="projetos pessoais"
             title="Meus repositórios em destaque no GitHub."
-            description="Projetos próprios que marco com estrela no GitHub — uma vitrine que atualizo direto por lá, sem precisar mexer no site."
+            description="Projetos próprios que marco com estrela no GitHub: uma vitrine que atualizo direto por lá, sem precisar mexer no site."
           />
         </Reveal>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {displayProjects.map((project, index) => (
             <Reveal key={project.key} delay={index * 120} direction="scale">
-              <article className="group flex h-full flex-col rounded-lg border border-[#A78BFA]/15 bg-[#171717] p-6 transition hover:-translate-y-1 hover:border-[#A78BFA]/50">
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                className="card card-hover group flex h-full flex-col p-7"
+              >
                 <div className="flex items-center justify-between gap-3">
-                  <p className="truncate text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
-                    Projeto em destaque
-                  </p>
+                  <span className="flex items-center gap-2 font-mono text-sm text-muted">
+                    <FaGithub className="text-lg text-fg" aria-hidden />
+                    NotHamada/
+                  </span>
                   {typeof project.stars === "number" && (
-                    <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-[#A3A3A3]">
-                      <FaStar className="text-[#A78BFA]" /> {project.stars}
+                    <span className="flex shrink-0 items-center gap-1 font-mono text-xs text-muted">
+                      <FaStar className="text-amber" aria-hidden />{" "}
+                      {project.stars}
                     </span>
                   )}
                 </div>
-                <h3 className="mt-3 text-2xl font-bold text-[#FAFAFA]">
+                <h3 className="mt-3 break-words font-display text-2xl font-bold text-fg transition group-hover:text-js">
                   {project.title}
                 </h3>
-                <p className="mt-4 flex-1 leading-7 text-[#A3A3A3]">
+                <p className="mt-4 flex-1 leading-7 text-muted">
                   {project.description}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-line pt-5">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[#0A0A0A] px-3 py-1 text-xs font-semibold text-[#FAFAFA]"
+                      className="rounded-md bg-surface-2 px-2.5 py-1 font-mono text-xs text-fg/90"
                     >
                       {tag}
                     </span>
                   ))}
+                  <FaArrowUpRightFromSquare
+                    className="ml-auto text-sm text-muted transition group-hover:text-js"
+                    aria-hidden
+                  />
                 </div>
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-7 self-start rounded-full bg-[#8B5CF6] px-5 py-2.5 text-sm font-bold text-[#FAFAFA] transition hover:bg-[#A78BFA]"
-                >
-                  Ver no GitHub
-                </a>
-              </article>
+              </a>
             </Reveal>
           ))}
         </div>

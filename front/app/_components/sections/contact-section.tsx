@@ -1,58 +1,97 @@
-import {Reveal} from "../reveal";
-import {FaLinkedin, FaGithub, FaWhatsapp} from "react-icons/fa6"
+import { Reveal } from "../reveal";
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+
+const channels = [
+  {
+    label: "Email",
+    value: "matheushamada@live.com",
+    href: "mailto:matheushamada@live.com",
+    icon: FaEnvelope,
+  },
+  {
+    label: "LinkedIn",
+    value: "in/matheushamada",
+    href: "https://www.linkedin.com/in/matheushamada/",
+    icon: FaLinkedin,
+    external: true,
+  },
+  {
+    label: "GitHub",
+    value: "NotHamada",
+    href: "https://github.com/NotHamada",
+    icon: FaGithub,
+    external: true,
+  },
+  {
+    label: "WhatsApp",
+    value: "+55 44 99117-0071",
+    href: "https://wa.me/5544991170071",
+    icon: FaWhatsapp,
+    external: true,
+  },
+];
 
 export function ContactSection() {
-    return (
-        <section id="contato" className="bg-[#0A0A0A] py-24">
-            <div className="section-shell">
-                <Reveal direction="scale">
-                    <div
-                        className="mx-auto max-w-4xl rounded-lg border border-[#A78BFA]/25 bg-[#171717] p-8 text-center shadow-[0_24px_80px_rgba(10,10,10,0.35)] md:p-12">
-                        <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#A78BFA]">
-                            Contato
-                        </p>
-                        <h2 className="mt-4 text-3xl font-black text-[#FAFAFA] md:text-5xl">
-                            Vamos construir algo com impacto?
-                        </h2>
-                        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#A3A3A3]">
-                            Estou aberto a oportunidades e conversas sobre desenvolvimento
-                            fullstack em .NET e PHP, sistemas web corporativos e integrações.
-                        </p>
-                        <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-                            <a
-                                href="mailto:matheushamada@live.com"
-                                className="rounded-full bg-[#8B5CF6] px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:bg-[#A78BFA]"
-                            >
-                                Enviar email
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/matheushamada/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex items-center gap-2 rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
-                            >
-                                <FaLinkedin/> LinkedIn
-                            </a>
-                            <a
-                                href="https://github.com/NotHamada"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex items-center gap-2 rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
-                            >
-                              <FaGithub/> GitHub
-                            </a>
-                            <a
-                                href="https://wa.me/5544991170071"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex items-center gap-2 rounded-full border border-[#A78BFA]/40 px-7 py-3 text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
-                            >
-                              <FaWhatsapp/> WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </Reveal>
+  return (
+    <section id="contato" className="hero-backdrop py-24 md:py-32">
+      <div className="section-shell">
+        <Reveal direction="scale">
+          <div className="gradient-border mx-auto max-w-4xl overflow-hidden rounded-2xl bg-surface/90 backdrop-blur">
+            <div className="flex items-center gap-2 border-b border-line px-5 py-3">
+              <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+              <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
+              <span className="h-3 w-3 rounded-full bg-[#28c840]" />
+              <span className="ml-3 font-mono text-xs text-muted">
+                bash — contato
+              </span>
             </div>
-        </section>
-    );
+            <div className="p-8 md:p-12">
+              <p className="font-mono text-sm text-muted">
+                <span className="text-node">➜</span>{" "}
+                <span className="text-js">~</span> dotnet run --project
+                contato
+              </p>
+              <h2 className="mt-5 font-display text-4xl font-bold tracking-tight text-fg md:text-6xl">
+                Vamos construir algo{" "}
+                <span className="text-gradient">com impacto?</span>
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
+                Estou aberto a oportunidades e conversas sobre desenvolvimento
+                fullstack com .NET, React, Next.js, Node.js e NestJS, sistemas
+                corporativos e integrações.
+              </p>
+              <ul className="mt-10 grid gap-3 sm:grid-cols-2">
+                {channels.map((channel) => {
+                  const Icon = channel.icon;
+
+                  return (
+                    <li key={channel.label}>
+                      <a
+                        href={channel.href}
+                        target={channel.external ? "_blank" : undefined}
+                        rel="noreferrer"
+                        className="group flex items-center gap-4 rounded-xl border border-line bg-bg/60 p-4 transition hover:border-js/60"
+                      >
+                        <span className="grid h-10 w-10 place-items-center rounded-lg bg-surface-2 text-lg text-fg transition group-hover:text-js">
+                          <Icon aria-hidden />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold text-fg">
+                            {channel.label}
+                          </span>
+                          <span className="block truncate font-mono text-xs text-muted">
+                            {channel.value}
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
 }

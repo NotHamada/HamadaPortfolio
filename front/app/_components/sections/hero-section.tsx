@@ -1,73 +1,86 @@
+import { CodeWindow } from "../code-window";
 import { Reveal } from "../reveal";
-import { AiOutlineDotNet } from "react-icons/ai";
+import { StackMarquee } from "../stack-marquee";
+
+const stats = [
+  { value: "4+", label: "anos desenvolvendo sistemas web" },
+  { value: "2º", label: "lugar no Hackathon SECOMP 2024" },
+  { value: "5", label: "certificações full stack e .NET" },
+];
 
 export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="hero-grid overflow-hidden border-b border-[#171717] bg-[#0A0A0A]"
+      className="hero-backdrop overflow-hidden border-b border-line"
     >
-      <div className="section-shell grid min-h-[calc(100vh-4rem)] items-center gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="section-shell grid min-h-[calc(100vh-4rem)] items-center gap-14 py-20 grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>
           <Reveal>
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
-              Full Stack Developer | C# .NET & PHP | Maringá - PR
+            <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 px-4 py-1.5 font-mono text-xs text-muted">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-node opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-node" />
+              </span>
+              Full Stack Developer · Maringá - PR
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <h1 className="max-w-4xl text-5xl font-black leading-[1.03] text-[#FAFAFA] md:text-7xl">
-              Desenvolvo sistemas web corporativos em .NET e PHP com foco em resultado.
+            <h1 className="mt-7 font-display text-[2.1rem] font-bold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-[3.4rem] xl:text-6xl">
+              Backend em <span className="text-dotnet">.NET</span>,
+              <br />
+              Frontend em <span className="text-js">React</span>,
+              <br />
+              <span className="text-gradient">do banco ao pixel.</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#A3A3A3] md:text-xl">
-              Sou Matheus Hamada, desenvolvedor fullstack com experiência em
-              C#, .NET, PHP, AngularJS, React, APIs REST e MySQL.
+            <p className="mt-7 max-w-xl text-lg leading-8 text-muted">
+              Sou <strong className="text-fg">Matheus Hamada</strong>,
+              desenvolvedor fullstack. Construo APIs e sistemas corporativos
+              com C# e .NET e interfaces modernas com React, Next.js, Node.js e
+              NestJS.
             </p>
           </Reveal>
           <Reveal delay={360}>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#experiencia"
-                className="rounded-full bg-[#8B5CF6] px-7 py-3 text-center text-sm font-bold text-[#FAFAFA] shadow-[0_18px_55px_rgba(139,92,246,0.28)] transition hover:bg-[#A78BFA]"
+                className="rounded-lg bg-gradient-to-r from-dotnet-deep to-dotnet px-7 py-3 text-center text-sm font-bold text-white shadow-[0_18px_50px_-12px_rgba(81,43,212,0.8)] transition hover:brightness-110"
               >
                 Ver experiência
               </a>
               <a
-                href="#sobre"
-                className="rounded-full border border-[#A78BFA]/40 px-7 py-3 text-center text-sm font-bold text-[#FAFAFA] transition hover:border-[#A78BFA] hover:bg-[#171717]"
+                href="#stack"
+                className="rounded-lg border border-line bg-surface/60 px-7 py-3 text-center font-mono text-sm font-semibold text-fg transition hover:border-js/60 hover:text-js"
               >
-                Sobre mim
+                $ ver --stack
               </a>
             </div>
           </Reveal>
+          <Reveal delay={460}>
+            <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-line pt-8">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="sr-only">{stat.label}</dt>
+                  <dd className="font-display text-3xl font-bold text-fg">
+                    {stat.value}
+                  </dd>
+                  <dd className="mt-1 text-xs leading-5 text-muted">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
         </div>
 
-        <Reveal direction="scale" delay={180}>
-          <div className="relative mx-auto aspect-square w-full max-w-[460px]">
-            <div className="absolute inset-8 rounded-full border border-[#A78BFA]/20 bg-[#171717]/70 shadow-2xl shadow-[#8B5CF6]/10" />
-            <div className="orbital-ring absolute inset-0 rounded-full border border-dashed border-[#8B5CF6]/35" />
-            <div className="orbital-ring absolute inset-12 rounded-full border border-[#A78BFA]/25" />
-            <div className="orbital-ring absolute inset-24 rounded-full border border-dashed border-[#FAFAFA]/25" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid h-48 w-48 place-items-center rounded-[32px] border border-[#A78BFA]/35 bg-[#0A0A0A] shadow-[0_25px_80px_rgba(167,139,250,0.22)]">
-                <span className="text-6xl font-black text-[#FAFAFA]">
-                  <AiOutlineDotNet/>
-                </span>
-              </div>
-            </div>
-            <div className="absolute left-4 top-16 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              C# .NET
-            </div>
-            <div className="absolute bottom-14 right-0 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              AngularJS · React
-            </div>
-            <div className="absolute right-4 top-2 rounded-2xl border border-[#A78BFA]/20 bg-[#171717] px-4 py-3 text-sm font-semibold text-[#FAFAFA] shadow-xl">
-              PHP
-            </div>
-          </div>
+        <Reveal direction="scale" delay={200}>
+          <CodeWindow />
         </Reveal>
       </div>
+
+      <StackMarquee />
     </section>
   );
 }

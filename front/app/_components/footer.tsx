@@ -2,17 +2,18 @@ import { socialLinks } from "../_data/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#171717] bg-[#0A0A0A]">
+    <footer className="border-t border-line bg-bg">
       <div className="section-shell flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
-        <p className="text-sm text-[#A3A3A3]">
-          © 2026 Matheus Hamada. Construído com Next.js.
+        <p className="font-mono text-sm text-muted">
+          <span className="text-node">✓</span> © 2026 Matheus Hamada · built
+          with <span className="text-fg">Next.js</span>
         </p>
         <div className="flex flex-wrap gap-5">
           {socialLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-[#A3A3A3] transition hover:text-[#A78BFA]"
+              className="text-sm font-medium text-muted transition hover:text-js"
               rel="noreferrer"
               target={link.external ? "_blank" : undefined}
             >

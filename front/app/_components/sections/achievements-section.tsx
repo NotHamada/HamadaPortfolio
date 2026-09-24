@@ -5,12 +5,16 @@ import { FaComments, FaLanguage, FaTrophy } from "react-icons/fa6";
 
 export function AchievementsSection() {
   return (
-    <section id="conquistas" className="bg-[#0A0A0A] py-24">
+    <section
+      id="conquistas"
+      className="border-y border-line bg-surface/40 py-24 md:py-32"
+    >
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Conquistas"
-            title="Reconhecimento, idiomas e interesses pessoais."
+            index="06"
+            eyebrow="conquistas"
+            title="Reconhecimento, idiomas e interesses."
             description="Um prêmio recente, os idiomas que uso no dia a dia e alguns interesses que também fazem parte de quem eu sou."
           />
         </Reveal>
@@ -22,15 +26,15 @@ export function AchievementsSection() {
               direction="scale"
               className="lg:col-span-3"
             >
-              <article className="flex flex-col gap-4 rounded-lg border border-[#A78BFA]/20 bg-[#171717] p-6 sm:flex-row sm:items-center">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#8B5CF6]/15 text-2xl text-[#A78BFA]">
-                  <FaTrophy />
+              <article className="gradient-border flex flex-col gap-5 rounded-[14px] bg-surface p-7 sm:flex-row sm:items-center">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-amber/10 text-3xl text-amber">
+                  <FaTrophy aria-hidden />
                 </span>
                 <div>
-                  <h3 className="text-xl font-bold text-[#FAFAFA]">
+                  <h3 className="font-display text-2xl font-bold text-fg">
                     {achievement.title}
                   </h3>
-                  <p className="mt-2 leading-7 text-[#A3A3A3]">
+                  <p className="mt-2 leading-7 text-muted">
                     {achievement.description}
                   </p>
                 </div>
@@ -39,39 +43,42 @@ export function AchievementsSection() {
           ))}
 
           <Reveal delay={140} direction="left">
-            <article className="h-full rounded-lg border border-[#A78BFA]/15 bg-[#171717] p-6">
-              <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
-                <FaLanguage /> Idiomas
+            <article className="card h-full p-7">
+              <p className="flex items-center gap-2 font-mono text-sm text-muted">
+                <FaLanguage className="text-lg text-js" aria-hidden /> Idiomas
               </p>
-              <div className="mt-5 flex flex-col gap-3">
+              <dl className="mt-5 flex flex-col gap-2">
                 {languages.map((item) => (
                   <div
                     key={item.language}
-                    className="flex items-center justify-between rounded-full bg-[#0A0A0A] px-4 py-2 text-sm font-semibold text-[#FAFAFA]"
+                    className="flex items-center justify-between rounded-lg bg-surface-2 px-4 py-2.5 text-sm"
                   >
-                    <span>{item.language}</span>
-                    <span className="text-[#A3A3A3]">{item.level}</span>
+                    <dt className="font-semibold text-fg">{item.language}</dt>
+                    <dd className="font-mono text-xs text-muted">
+                      {item.level}
+                    </dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </article>
           </Reveal>
 
           <Reveal delay={200} direction="right" className="lg:col-span-2">
-            <article className="h-full rounded-lg border border-[#A78BFA]/15 bg-[#171717] p-6">
-              <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
-                <FaComments /> Interesses
+            <article className="card h-full p-7">
+              <p className="flex items-center gap-2 font-mono text-sm text-muted">
+                <FaComments className="text-lg text-dotnet" aria-hidden />{" "}
+                Interesses
               </p>
-              <div className="mt-5 flex flex-wrap gap-3">
+              <ul className="mt-5 flex flex-wrap gap-2.5">
                 {interests.map((interest) => (
-                  <span
+                  <li
                     key={interest}
-                    className="rounded-full border border-[#8B5CF6]/35 px-4 py-2 text-sm font-semibold text-[#FAFAFA]"
+                    className="rounded-lg border border-line px-4 py-2 text-sm text-fg/90"
                   >
                     {interest}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </article>
           </Reveal>
         </div>
