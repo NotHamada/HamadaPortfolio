@@ -1,10 +1,10 @@
 export const navItems = [
   { label: "Sobre", href: "#sobre" },
+  { label: "Stack", href: "#stack" },
   { label: "Experiência", href: "#experiencia" },
   { label: "Atuação", href: "#projetos" },
-  { label: "Habilidades", href: "#habilidades" },
-  { label: "Conquistas", href: "#conquistas" },
   { label: "Projetos pessoais", href: "#projetos-pessoais" },
+  { label: "Conquistas", href: "#conquistas" },
 ];
 
 export const socialLinks = [
@@ -49,7 +49,7 @@ export const projects = [
     title: "Desenvolvimento fullstack .NET e PHP",
     description:
       "Construção e manutenção de funcionalidades para sistemas web usados por operações como Facility Imóveis, SendCase, NineSix e Credbee.",
-    stack: ["C#", ".NET", "PHP", "AngularJS"],
+    stack: ["C#", ".NET", "AngularJS", "PHP"],
   },
   {
     type: "Integrações",
@@ -59,11 +59,11 @@ export const projects = [
     stack: ["REST APIs", "MySQL", "SQL"],
   },
   {
-    type: "Requisitos e qualidade",
-    title: "Levantamento de requisitos e evolução contínua",
+    type: "Frontend moderno",
+    title: "Interfaces com React e Next.js",
     description:
-      "Análise de solicitações junto às áreas envolvidas, correção de bugs, melhoria de performance e evolução contínua de módulos e projetos.",
-    stack: ["Git", "MVC", "React"],
+      "Interfaces componentizadas em React e Next.js, apoiadas por APIs em Node.js/NestJS, além de correção de bugs, melhoria de performance e evolução contínua de módulos.",
+    stack: ["React", "Next.js", "Node.js", "NestJS"],
   },
 ];
 
@@ -77,18 +77,35 @@ export const personalProjects = [
   },
 ];
 
-export const skillGroups = [
+export const stackEcosystems = [
   {
-    title: "Backend",
-    items: ["C#", ".NET Core", "ASP.NET", "PHP", "REST APIs", "MySQL", "SQL"],
+    id: "dotnet",
+    name: ".NET & C#",
+    tagline: "Backend robusto, tipado e pronto para o ambiente corporativo.",
+    items: [
+      "C#",
+      ".NET Core",
+      "ASP.NET",
+      "Web APIs REST",
+      "Arquitetura MVC",
+    ],
   },
   {
-    title: "Frontend",
-    items: ["AngularJS", "React", "JavaScript", "HTML", "CSS"],
+    id: "js",
+    name: "JavaScript & TypeScript",
+    tagline: "Do servidor Node.js à interface React, com a mesma linguagem.",
+    items: ["React", "Next.js", "Node.js", "NestJS", "TypeScript", "AngularJS"],
+  },
+];
+
+export const skillGroups = [
+  {
+    title: "Dados & Integrações",
+    items: ["MySQL", "SQL", "REST APIs", "PagarMe", "PHP"],
   },
   {
     title: "Fundamentos",
-    items: ["Arquitetura MVC", "Git", "C", "C++", "Excel"],
+    items: ["Git", "HTML", "CSS", "C", "C++", "Excel"],
   },
   {
     title: "Competências",

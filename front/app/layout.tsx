@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "./_components/footer";
 import { Header } from "./_components/header";
@@ -10,15 +10,20 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Matheus Hamada | Full Stack Developer",
   description:
-    "Landing page pessoal de Matheus Hamada, desenvolvedor fullstack com experiência em C#, .NET, PHP, AngularJS, React, APIs REST e MySQL.",
+    "Landing page pessoal de Matheus Hamada, desenvolvedor fullstack focado em C# e .NET no backend e no ecossistema JavaScript (React, Next.js, Node.js e NestJS).",
 };
 
 export default function RootLayout({
@@ -29,11 +34,11 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${geistSans.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
       <body>
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-clip">{children}</main>
         <Footer />
         <Analytics />
       </body>

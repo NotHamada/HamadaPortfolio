@@ -1,54 +1,63 @@
 import { projects } from "../../_data/site";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
+import { FaDatabase, FaLayerGroup, FaWindowMaximize } from "react-icons/fa6";
+
+const icons = [FaLayerGroup, FaDatabase, FaWindowMaximize];
 
 export function ProjectsSection() {
   return (
-    <section id="projetos" className="bg-[#0A0A0A] py-24">
+    <section
+      id="projetos"
+      className="border-y border-line bg-surface/40 py-24 md:py-32"
+    >
       <div className="section-shell">
         <Reveal>
           <SectionHeading
-            eyebrow="Atuação profissional"
+            index="04"
+            eyebrow="atuação"
             title="Frentes de atuação no desenvolvimento web."
-            description="Minha atuação profissional abrange sistemas corporativos em .NET e PHP, integrações de dados, levantamento de requisitos e melhoria contínua de aplicações."
+            description="Sistemas corporativos em .NET, integrações e dados, e interfaces modernas no ecossistema JavaScript."
           />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 140} direction="scale">
-              <article className="group flex h-full flex-col rounded-lg border border-[#A78BFA]/15 bg-[#171717] p-6 transition hover:-translate-y-1 hover:border-[#A78BFA]/50">
-                <div className="mb-7 h-40 rounded-md border border-[#A78BFA]/15 bg-[#0A0A0A] p-4">
-                  <div className="mb-4 h-3 w-24 rounded-full bg-[#8B5CF6]" />
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="h-20 rounded bg-[#171717]" />
-                    <div className="h-20 rounded bg-[#8B5CF6]/40" />
-                    <div className="h-20 rounded bg-[#A78BFA]/30" />
-                  </div>
-                  <div className="mt-4 h-3 w-full rounded-full bg-[#FAFAFA]/20" />
-                  <div className="mt-2 h-3 w-2/3 rounded-full bg-[#FAFAFA]/20" />
-                </div>
-                <p className="text-sm font-semibold text-[#A78BFA]">
-                  {project.type}
-                </p>
-                <h3 className="mt-3 text-2xl font-bold text-[#FAFAFA]">
-                  {project.title}
-                </h3>
-                <p className="mt-4 flex-1 leading-7 text-[#A3A3A3]">
-                  {project.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((tool) => (
-                    <span
-                      key={tool}
-                      className="rounded-full bg-[#0A0A0A] px-3 py-1 text-xs font-semibold text-[#FAFAFA]"
-                    >
-                      {tool}
+          {projects.map((project, index) => {
+            const Icon = icons[index % icons.length];
+
+            return (
+              <Reveal key={project.title} delay={index * 140} direction="scale">
+                <article className="card card-hover flex h-full flex-col p-7">
+                  <div className="flex items-center justify-between">
+                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-dotnet-deep/60 to-js/30 text-xl text-white">
+                      <Icon aria-hidden />
                     </span>
-                  ))}
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                    <span className="font-mono text-xs text-line">
+                      0{index + 1}
+                    </span>
+                  </div>
+                  <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-js">
+                    {project.type}
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-bold text-fg">
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 flex-1 leading-7 text-muted">
+                    {project.description}
+                  </p>
+                  <ul className="mt-6 flex flex-wrap gap-2 border-t border-line pt-5">
+                    {project.stack.map((tool) => (
+                      <li
+                        key={tool}
+                        className="rounded-md bg-surface-2 px-2.5 py-1 font-mono text-xs text-fg/90"
+                      >
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
