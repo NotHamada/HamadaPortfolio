@@ -1,24 +1,24 @@
-import { profileHighlights } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
 import { FaCode, FaRoute, FaUserGear } from "react-icons/fa6";
 
 const icons = [FaRoute, FaCode, FaUserGear];
 
-export function AboutSection() {
+export function AboutSection({ dict }: { dict: Dictionary["about"] }) {
   return (
     <section id="sobre" className="py-24 md:py-32">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
             index="01"
-            eyebrow="sobre"
-            title="Fullstack com base sólida em produto, dados e requisitos."
-            description="Desenvolvo e mantenho sistemas web corporativos: implemento funcionalidades, integro APIs REST, modelo dados e levanto requisitos junto às áreas de negócio."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">
-          {profileHighlights.map((item, index) => {
+          {dict.highlights.map((item, index) => {
             const Icon = icons[index % icons.length];
 
             return (

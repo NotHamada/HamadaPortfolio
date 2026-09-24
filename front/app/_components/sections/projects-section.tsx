@@ -1,11 +1,15 @@
-import { projects } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
 import { FaDatabase, FaLayerGroup, FaWindowMaximize } from "react-icons/fa6";
 
 const icons = [FaLayerGroup, FaDatabase, FaWindowMaximize];
 
-export function ProjectsSection() {
+export function ProjectsSection({
+  dict,
+}: {
+  dict: Dictionary["projects"];
+}) {
   return (
     <section
       id="projetos"
@@ -15,13 +19,13 @@ export function ProjectsSection() {
         <Reveal>
           <SectionHeading
             index="04"
-            eyebrow="atuação"
-            title="Frentes de atuação no desenvolvimento web."
-            description="Sistemas corporativos em .NET, integrações e dados, e interfaces modernas no ecossistema JavaScript."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-3">
-          {projects.map((project, index) => {
+          {dict.items.map((project, index) => {
             const Icon = icons[index % icons.length];
 
             return (

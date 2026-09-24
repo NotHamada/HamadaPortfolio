@@ -1,9 +1,13 @@
-import { achievements, interests, languages } from "../../_data/site";
+import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
 import { FaComments, FaLanguage, FaTrophy } from "react-icons/fa6";
 
-export function AchievementsSection() {
+export function AchievementsSection({
+  dict,
+}: {
+  dict: Dictionary["achievements"];
+}) {
   return (
     <section
       id="conquistas"
@@ -13,13 +17,13 @@ export function AchievementsSection() {
         <Reveal>
           <SectionHeading
             index="06"
-            eyebrow="conquistas"
-            title="Reconhecimento, idiomas e interesses."
-            description="Um prêmio recente, os idiomas que uso no dia a dia e alguns interesses que também fazem parte de quem eu sou."
+            eyebrow={dict.eyebrow}
+            title={dict.title}
+            description={dict.description}
           />
         </Reveal>
         <div className="grid gap-6 lg:grid-cols-3">
-          {achievements.map((achievement, index) => (
+          {dict.items.map((achievement, index) => (
             <Reveal
               key={achievement.title}
               delay={index * 120}
@@ -45,10 +49,11 @@ export function AchievementsSection() {
           <Reveal delay={140} direction="left">
             <article className="card h-full p-7">
               <p className="flex items-center gap-2 font-mono text-sm text-muted">
-                <FaLanguage className="text-lg text-js" aria-hidden /> Idiomas
+                <FaLanguage className="text-lg text-js" aria-hidden />{" "}
+                {dict.languagesLabel}
               </p>
               <dl className="mt-5 flex flex-col gap-2">
-                {languages.map((item) => (
+                {dict.languages.map((item) => (
                   <div
                     key={item.language}
                     className="flex items-center justify-between rounded-lg bg-surface-2 px-4 py-2.5 text-sm"
@@ -67,10 +72,10 @@ export function AchievementsSection() {
             <article className="card h-full p-7">
               <p className="flex items-center gap-2 font-mono text-sm text-muted">
                 <FaComments className="text-lg text-dotnet" aria-hidden />{" "}
-                Interesses
+                {dict.interestsLabel}
               </p>
               <ul className="mt-5 flex flex-wrap gap-2.5">
-                {interests.map((interest) => (
+                {dict.interests.map((interest) => (
                   <li
                     key={interest}
                     className="rounded-lg border border-line px-4 py-2 text-sm text-fg/90"

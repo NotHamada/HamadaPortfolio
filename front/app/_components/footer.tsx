@@ -1,12 +1,13 @@
 import { socialLinks } from "../_data/site";
+import type { Dictionary } from "../_i18n/dictionaries/pt";
 
-export function Footer() {
+export function Footer({ dict }: { dict: Dictionary }) {
   return (
     <footer className="border-t border-line bg-bg">
       <div className="section-shell flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
         <p className="font-mono text-sm text-muted">
-          <span className="text-node">✓</span> © 2026 Matheus Hamada · built
-          with <span className="text-fg">Next.js</span>
+          <span className="text-node">✓</span> © 2026 Matheus Hamada · 
+          {dict.footer.builtWith} <span className="text-fg">Next.js</span>
         </p>
         <div className="flex flex-wrap gap-5">
           {socialLinks.map((link) => (
