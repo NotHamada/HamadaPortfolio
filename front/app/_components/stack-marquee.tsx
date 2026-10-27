@@ -1,22 +1,24 @@
 import {
+  SiAngular,
   SiDotnet,
+  SiJavascript,
   SiMysql,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
   SiReact,
-  SiTypescript,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
 const technologies = [
   { name: ".NET", icon: SiDotnet, color: "text-dotnet" },
   { name: "C#", icon: TbBrandCSharp, color: "text-dotnet" },
+  { name: "Angular", icon: SiAngular, color: "text-[#dd0031]" },
   { name: "React", icon: SiReact, color: "text-js" },
   { name: "Next.js", icon: SiNextdotjs, color: "text-fg" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-node" },
   { name: "NestJS", icon: SiNestjs, color: "text-[#e0234e]" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178c6]" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-[#f7df1e]" },
   { name: "MySQL", icon: SiMysql, color: "text-[#4479a1]" },
 ];
 

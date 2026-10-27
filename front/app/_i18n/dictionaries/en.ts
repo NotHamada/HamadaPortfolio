@@ -4,7 +4,7 @@ const en: Dictionary = {
   meta: {
     title: "Matheus Hamada | Full Stack Developer",
     description:
-      "Personal landing page of Matheus Hamada, a full stack developer focused on C# and .NET on the backend and the JavaScript ecosystem (React, Next.js, Node.js and NestJS).",
+      "Matheus Hamada, Full Stack Developer and Systems Analyst with 4+ years building corporate web systems with C# (.NET Core), Angular, React, Next.js, Node.js, NestJS and MySQL.",
   },
   header: {
     contact: "contact()",
@@ -16,21 +16,21 @@ const en: Dictionary = {
     { label: "Stack", href: "#stack" },
     { label: "Experience", href: "#experiencia" },
     { label: "Work", href: "#projetos" },
-    { label: "Side projects", href: "#projetos-pessoais" },
+    { label: "Projects", href: "#projetos-pessoais" },
     { label: "Achievements", href: "#conquistas" },
   ],
   hero: {
-    badge: "Full Stack Developer · Maringá, Brazil",
+    badge: "Full Stack Developer · Systems Analyst · Maringá, Brazil",
     backend: "Backend in",
     frontend: "Frontend in",
     tagline: "from database to pixel.",
     introBefore: "I'm",
     introAfter:
-      ", a full stack developer. I build APIs and enterprise systems with C# and .NET, and modern interfaces with React, Next.js, Node.js and NestJS.",
+      ", a full stack developer. For 4+ years I've been delivering and evolving corporate web systems in production with C# (.NET Core), AngularJS, React, Next.js, Node.js and MySQL.",
     primaryCta: "See experience",
     secondaryCta: "$ show --stack",
     stats: [
-      { value: "4+", label: "years building web systems" },
+      { value: "4+", label: "years on web systems in production" },
       { value: "2nd", label: "place at SECOMP Hackathon 2024" },
       { value: "5", label: "full stack and .NET certifications" },
     ],
@@ -41,27 +41,27 @@ const en: Dictionary = {
   },
   about: {
     eyebrow: "about",
-    title: "Full stack with a solid foundation in product, data and requirements.",
+    title: "Corporate systems in production, from database to interface.",
     description:
-      "I build and maintain enterprise web systems: shipping features, integrating REST APIs, modeling data and gathering requirements with business teams.",
+      "I build and evolve web systems for healthcare, finance and real estate: gathering requirements, integrating REST APIs, modeling data and shipping features end to end.",
     highlights: [
       {
         kicker: "Journey",
-        title: "From intern to Systems Analyst",
+        title: "From intern to Full Stack in 2 years and 5 months",
         description:
-          "I started in 2022 as an intern at Ironbug Sistemas, grew into a Full Stack .NET Developer, and today I work as a Systems Analyst and PHP Developer at Ideal Imóveis Maringá.",
+          "I started in 2022 as an intern at Ironbug Sistemas, grew into a Full Stack .NET Developer at the same company, and now work as a Systems Analyst and PHP Developer at Ideal Imóveis Maringá.",
       },
       {
         kicker: "Stack",
-        title: "C#, .NET, PHP, AngularJS, React and MySQL",
+        title: "C#, .NET Core, Angular, React, Next.js and Node.js",
         description:
-          "Feature development, REST API integrations (such as PagarMe) and data modeling for systems in healthcare, finance and real estate.",
+          "Features in production, REST API integrations (such as the PagarMe payments API) and data modeling in MySQL, SQL Server and PostgreSQL.",
       },
       {
-        kicker: "Profile",
-        title: "Analytical, organized and collaborative",
+        kicker: "How I work",
+        title: "Validated requirements, AI with my own review",
         description:
-          "Focused on requirements gathering, problem solving, communication and teamwork in corporate environments.",
+          "Every delivery starts from a need validated with the teams involved. I use generative AI (Claude) to speed up development, always with my own review and validation.",
       },
     ],
   },
@@ -69,36 +69,47 @@ const en: Dictionary = {
     eyebrow: "stack",
     title: "Two ecosystems, one end-to-end delivery.",
     description:
-      "C# and .NET for APIs and business rules; React, Next.js, Node.js and NestJS for interfaces and services in JavaScript/TypeScript.",
+      "C# and .NET Core for APIs and business rules; Angular, React, Next.js, Node.js and NestJS for interfaces and services in JavaScript.",
     ecosystems: {
       dotnet: {
         name: ".NET & C#",
         tagline: "Robust, strongly typed backends ready for the enterprise.",
-        items: ["C#", ".NET Core", "ASP.NET", "REST Web APIs", "MVC Architecture"],
+        items: ["C#", ".NET Core", "ASP.NET", "REST APIs", "MVC Architecture"],
       },
       js: {
-        name: "JavaScript & TypeScript",
+        name: "JavaScript ecosystem",
         tagline: "From Node.js servers to React interfaces, in one language.",
-        items: ["React", "Next.js", "Node.js", "NestJS", "TypeScript", "AngularJS"],
+        items: ["React", "Next.js", "Node.js", "NestJS", "AngularJS", "JavaScript"],
       },
     },
     groups: [
       {
-        title: "Data & Integrations",
-        items: ["MySQL", "SQL", "REST APIs", "PagarMe", "PHP"],
-      },
-      {
-        title: "Fundamentals",
-        items: ["Git", "HTML", "CSS", "C", "C++", "Excel"],
-      },
-      {
-        title: "Soft skills",
+        title: "Data",
         items: [
-          "Project Management",
+          "MySQL",
+          "SQL Server",
+          "PostgreSQL",
+          "Data Modeling",
+          "Data Analysis",
+        ],
+      },
+      {
+        title: "Engineering Practices",
+        items: [
+          "Git",
+          "GitHub Actions (CI/CD)",
+          "Scrum / Kanban",
+          "API and Unit Testing",
+          "Generative AI (Claude)",
+        ],
+      },
+      {
+        title: "Analysis & Also use",
+        items: [
+          "Systems Analysis",
           "Requirements Gathering",
-          "Documentation",
-          "Communication",
-          "Advanced English",
+          "PHP",
+          "PagarMe API",
         ],
       },
     ],
@@ -108,41 +119,54 @@ const en: Dictionary = {
     eyebrow: "experience",
     title: "Professional and academic journey.",
     description:
-      "From my internship in 2022 to my current role: positions, responsibilities and the education behind my work.",
+      "From my internship in 2022 to my current role: positions, deliveries and the education behind my work.",
     workLog: "experience",
     educationLog: "education",
     jobs: [
       {
         period: "Aug 2026 - Present",
-        title: "Systems Analyst & PHP Developer - Ideal Imóveis Maringá",
-        description:
-          "Requirements gathering with stakeholders, development and maintenance of PHP modules for Credbee (a rental guarantee platform), and internal solutions for continuous improvement of the system.",
+        title: "Systems Analyst and PHP Developer",
+        company: "Ideal Imóveis Maringá",
+        highlights: [
+          "Gather requirements with the teams involved before each development on Credbee's system (rental guarantee), ensuring every delivery starts from a validated need.",
+          "Develop and update PHP modules, keeping the platform in continuous evolution.",
+          "Analyze internal projects and develop PHP solutions that sustain the system's continuous improvement.",
+        ],
       },
       {
         period: "Aug 2024 - Jun 2026",
-        title: "Full Stack .NET Developer - Ironbug Sistemas",
-        description:
-          "Built and maintained enterprise web systems (Facility Imóveis, SendCase and NineSix) with C# (.NET Core) and AngularJS, integrated REST APIs (including PagarMe) and modeled MySQL data for healthcare, finance and real estate.",
+        title: "Full Stack .NET Developer",
+        company: "Ironbug Sistemas",
+        highlights: [
+          "Delivered and maintained features in C# (.NET Core) and AngularJS for corporate systems in production: Facility Imóveis, NineSix, and SendCase, a virtual-consultation platform still in use at public health clinics (UBS) in the region.",
+          "Integrated REST APIs, including the PagarMe payments API, and modeled data in MySQL for healthcare, finance, and real estate systems.",
+          "Fixed bugs and optimized application performance, improving system responsiveness and automating crucial parts.",
+        ],
       },
       {
         period: "Mar 2022 - Jul 2024",
-        title: "Computer Science Intern - Ironbug Sistemas",
-        description:
-          "Supported the development and maintenance of web applications through bug fixes, testing and feature work, gaining hands-on experience with MVC architecture and full stack development.",
+        title: "Computer Science Intern",
+        company: "Ironbug Sistemas",
+        highlights: [
+          "Supported the development and maintenance of web applications by fixing bugs, testing, and implementing features.",
+          "Grew from intern to Full Stack Developer at the same company in 2 years and 5 months, learning MVC architecture and full stack development hands-on.",
+        ],
       },
     ],
     education: [
       {
         period: "Aug 2021 - Dec 2026",
-        title: "Bachelor's in Computer Science",
-        institution: "State University of Maringá (UEM)",
-        status: "In progress",
+        title: "Bachelor's Degree in Computer Science",
+        institution: "Universidade Estadual de Maringá (UEM)",
+        status: "Expected",
+        note: "Senior thesis focused on Big Data and NoSQL processing.",
       },
       {
         period: "May 2021 - Nov 2023",
-        title: "Technologist Degree in Systems Analysis and Development",
+        title: "Associate Degree in Systems Analysis and Development",
         institution: "UniCesumar",
         status: "Completed",
+        note: "",
       },
     ],
   },
@@ -150,37 +174,51 @@ const en: Dictionary = {
     eyebrow: "work",
     title: "Areas of work in web development.",
     description:
-      "Enterprise systems in .NET, integrations and data, and modern interfaces in the JavaScript ecosystem.",
+      "Corporate systems in production, integrations and data, and continuous performance and quality improvement.",
     items: [
       {
-        type: "Enterprise systems",
-        title: "Full stack .NET and PHP development",
+        type: "Corporate systems",
+        title: "Full stack .NET in production",
         description:
-          "Building and maintaining features for web systems used by businesses such as Facility Imóveis, SendCase, NineSix and Credbee.",
-        stack: ["C#", ".NET", "AngularJS", "PHP"],
+          "Features in C# (.NET Core) and AngularJS for Facility Imóveis, NineSix and SendCase, a virtual-consultation platform still in use at public health clinics in the region, plus PHP modules for Credbee.",
+        stack: ["C#", ".NET Core", "AngularJS", "PHP"],
       },
       {
         type: "Integrations",
         title: "REST APIs and data",
         description:
-          "Consuming and integrating REST APIs such as PagarMe, with MySQL modeling and queries for healthcare, finance and real estate.",
-        stack: ["REST APIs", "MySQL", "SQL"],
+          "REST API integrations, including the PagarMe payments API, and MySQL data modeling for healthcare, finance and real estate systems.",
+        stack: ["REST APIs", "PagarMe", "MySQL"],
       },
       {
-        type: "Modern frontend",
-        title: "Interfaces with React and Next.js",
+        type: "Quality and performance",
+        title: "Optimization and automation",
         description:
-          "Component-based interfaces in React and Next.js backed by Node.js/NestJS APIs, plus bug fixes, performance improvements and continuous evolution of modules.",
-        stack: ["React", "Next.js", "Node.js", "NestJS"],
+          "Bug fixing, performance optimization and automation of crucial parts of the systems, backed by API and unit tests and requirements validated before each delivery.",
+        stack: ["Git", "GitHub Actions", "Testing", "Scrum"],
       },
     ],
   },
   personalProjects: {
-    eyebrow: "side projects",
-    title: "My featured repositories on GitHub.",
+    eyebrow: "projects",
+    title: "Personal projects and featured repositories.",
     description:
-      "Personal projects I star on GitHub: a showcase I update right there, without touching the site.",
+      "What I build outside of work, plus the repositories I star on GitHub, which update the site on their own.",
     noDescription: "No description provided.",
+    featured: {
+      badge: "Featured project",
+      name: "Sonalytics",
+      period: "Aug 2026 - Present",
+      highlights: [
+        "A web app that analyzes my own Spotify listening history, with a full-history dashboard, insights and Wrapped-style reports.",
+        "Built with Next.js (React) and Node.js and deployed on Vercel, using generative AI as support while keeping architecture decisions and validation my own responsibility.",
+      ],
+      stack: ["Next.js", "React", "Node.js", "Vercel"],
+      siteLabel: "Live site",
+      siteHref: "https://sonalytics.vercel.app",
+      repoLabel: "Source",
+      repoHref: "https://github.com/NotHamada/Sonalytics",
+    },
     fallback: [
       {
         title: "F1Statistics",
@@ -193,14 +231,14 @@ const en: Dictionary = {
   },
   achievements: {
     eyebrow: "achievements",
-    title: "Recognition, languages and interests.",
+    title: "Recognition, languages and volunteering.",
     description:
-      "A recent award, the languages I use every day and a few interests that are also part of who I am.",
+      "A recent award, the languages I use every day and my volunteer work outside of tech.",
     items: [
       {
-        title: "2nd place — SECOMP Hackathon by Elotech 2024",
+        title: "2nd Place — SECOMP by Elotech Hackathon 2024",
         description:
-          "A partnership between Elotech Gestão Pública and UEM's Computing Week, with “Faladoria”, a project focused on artificial intelligence solutions for public administration.",
+          "A partnership between Elotech Gestão Pública and Semana da Computação (UEM), with the project “Faladoria”, focused on AI-driven solutions for public administration.",
       },
     ],
     languagesLabel: "Languages",
@@ -208,13 +246,17 @@ const en: Dictionary = {
       { language: "Portuguese", level: "Native" },
       { language: "English", level: "Advanced" },
     ],
-    interestsLabel: "Interests",
-    interests: [
-      "Reading",
-      "Sports",
-      "Collecting TCGs",
-      "Talking about all kinds of topics",
-    ],
+    volunteer: {
+      label: "Volunteer experience",
+      role: "1st Secretary",
+      organization:
+        "FMECH — Federação das Mocidades Evangélicas Holiness (3rd Region)",
+      period: "Apr 2026 - Present",
+      highlights: [
+        "Centralize communication between the board and the coordinators of 5 local youth groups (Assaí, Curitiba, Londrina, Maringá and Paranaguá), keeping the institutional contact database up to date.",
+        "Organize the federation's administrative documents and records and support the planning of activities and events.",
+      ],
+    },
   },
   contact: {
     terminalTitle: "bash — contact",
@@ -222,7 +264,7 @@ const en: Dictionary = {
     titleStart: "Let's build something",
     titleHighlight: "that makes an impact.",
     description:
-      "I'm open to opportunities and conversations about full stack development with .NET, React, Next.js, Node.js and NestJS, enterprise systems and integrations.",
+      "I'm open to opportunities and conversations about full stack development with .NET, Angular, React, Next.js, Node.js and NestJS, corporate systems and integrations.",
   },
   footer: {
     builtWith: "built with",

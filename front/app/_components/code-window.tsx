@@ -28,7 +28,7 @@ app.Run();`,
     icon: SiReact,
     accent: "text-js",
     code: `export default function Portfolio() {
-  const stack = ["React", "Next.js", "TypeScript"];
+  const stack = ["React", "Next.js", "Node.js"];
 
   {{serverComponentComment}}
   return (

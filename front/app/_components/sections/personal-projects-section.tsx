@@ -2,7 +2,12 @@ import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { getStarredRepos } from "../../_lib/github";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
-import { FaArrowUpRightFromSquare, FaGithub, FaStar } from "react-icons/fa6";
+import {
+  FaArrowUpRightFromSquare,
+  FaGithub,
+  FaSpotify,
+  FaStar,
+} from "react-icons/fa6";
 
 type DisplayProject = {
   key: string;
@@ -18,7 +23,11 @@ export async function PersonalProjectsSection({
 }: {
   dict: Dictionary["personalProjects"];
 }) {
-  const starredRepos = await getStarredRepos(6);
+  const { featured } = dict;
+  // The featured project already has its own card, so skip it in the grid.
+  const starredRepos = (await getStarredRepos(7))
+    .filter((repo) => repo.name.toLowerCase() !== featured.name.toLowerCase())
+    .slice(0, 6);
 
   const displayProjects: DisplayProject[] =
     starredRepos.length > 0
@@ -50,6 +59,66 @@ export async function PersonalProjectsSection({
             title={dict.title}
             description={dict.description}
           />
+        </Reveal>
+
+        <Reveal direction="scale">
+          <article className="gradient-border mb-6 grid gap-8 overflow-hidden rounded-2xl bg-surface p-7 md:p-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+            <div>
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="rounded-md bg-node/15 px-2.5 py-1 font-mono text-xs text-node">
+                  {featured.badge}
+                </span>
+                <span className="font-mono text-xs text-muted">
+                  {featured.period}
+                </span>
+              </div>
+              <h3 className="mt-5 flex items-center gap-3 font-display text-3xl font-bold text-fg md:text-4xl">
+                <FaSpotify className="text-[#1db954]" aria-hidden />
+                {featured.name}
+              </h3>
+              <ul className="mt-5 space-y-3">
+                {featured.highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="relative pl-4 leading-7 text-muted before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-node"
+                  >
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex flex-col gap-6 lg:items-end">
+              <ul className="flex flex-wrap gap-2 lg:justify-end">
+                {featured.stack.map((tool) => (
+                  <li
+                    key={tool}
+                    className="rounded-md bg-surface-2 px-2.5 py-1 font-mono text-xs text-fg/90"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href={featured.siteHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-dotnet-deep to-dotnet px-5 py-2.5 text-sm font-bold text-white transition hover:brightness-110"
+                >
+                  {featured.siteLabel}
+                  <FaArrowUpRightFromSquare className="text-xs" aria-hidden />
+                </a>
+                <a
+                  href={featured.repoHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-lg border border-line bg-bg/60 px-5 py-2.5 font-mono text-sm font-semibold text-fg transition hover:border-js/60 hover:text-js"
+                >
+                  <FaGithub aria-hidden /> {featured.repoLabel}
+                </a>
+              </div>
+            </div>
+          </article>
         </Reveal>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
