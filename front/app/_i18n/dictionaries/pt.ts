@@ -2,7 +2,7 @@ const pt = {
   meta: {
     title: "Matheus Hamada | Full Stack Developer",
     description:
-      "Landing page pessoal de Matheus Hamada, desenvolvedor fullstack focado em C# e .NET no backend e no ecossistema JavaScript (React, Next.js, Node.js e NestJS).",
+      "Matheus Hamada, Desenvolvedor Full Stack e Analista de Sistemas com mais de 4 anos em sistemas web corporativos com C# (.NET Core), Angular, React, Next.js, Node.js, NestJS e MySQL.",
   },
   header: {
     contact: "contato()",
@@ -14,21 +14,21 @@ const pt = {
     { label: "Stack", href: "#stack" },
     { label: "Experiência", href: "#experiencia" },
     { label: "Atuação", href: "#projetos" },
-    { label: "Projetos pessoais", href: "#projetos-pessoais" },
+    { label: "Projetos", href: "#projetos-pessoais" },
     { label: "Conquistas", href: "#conquistas" },
   ],
   hero: {
-    badge: "Full Stack Developer · Maringá - PR",
+    badge: "Full Stack Developer · Analista de Sistemas · Maringá - PR",
     backend: "Backend em",
     frontend: "Frontend em",
     tagline: "do banco ao pixel.",
     introBefore: "Sou",
     introAfter:
-      ", desenvolvedor fullstack. Construo APIs e sistemas corporativos com C# e .NET e interfaces modernas com React, Next.js, Node.js e NestJS.",
+      ", desenvolvedor full stack. Há mais de 4 anos entrego e evoluo sistemas web corporativos em produção com C# (.NET Core), AngularJS, React, Next.js, Node.js e MySQL.",
     primaryCta: "Ver experiência",
     secondaryCta: "$ ver --stack",
     stats: [
-      { value: "4+", label: "anos desenvolvendo sistemas web" },
+      { value: "4+", label: "anos em sistemas web em produção" },
       { value: "2º", label: "lugar no Hackathon SECOMP 2024" },
       { value: "5", label: "certificações full stack e .NET" },
     ],
@@ -39,27 +39,27 @@ const pt = {
   },
   about: {
     eyebrow: "sobre",
-    title: "Fullstack com base sólida em produto, dados e requisitos.",
+    title: "Sistemas corporativos em produção, do banco à interface.",
     description:
-      "Desenvolvo e mantenho sistemas web corporativos: implemento funcionalidades, integro APIs REST, modelo dados e levanto requisitos junto às áreas de negócio.",
+      "Desenvolvo e evoluo sistemas web para saúde, financeiro e imobiliário: levanto requisitos, integro APIs REST, modelo dados e entrego funcionalidades de ponta a ponta.",
     highlights: [
       {
         kicker: "Trajetória",
-        title: "De estagiário a Analista de Sistemas",
+        title: "De estagiário a Full Stack em 2 anos e 5 meses",
         description:
-          "Comecei em 2022 como estagiário na Ironbug Sistemas, evoluí para Desenvolvedor Full Stack .NET e hoje atuo como Analista de Sistemas e Desenvolvedor PHP na Ideal Imóveis Maringá.",
+          "Comecei em 2022 como estagiário na Ironbug Sistemas, cresci para Desenvolvedor Full Stack .NET na mesma empresa e hoje sou Analista de Sistemas e Desenvolvedor PHP na Ideal Imóveis Maringá.",
       },
       {
         kicker: "Stack",
-        title: "C#, .NET, PHP, AngularJS, React e MySQL",
+        title: "C#, .NET Core, Angular, React, Next.js e Node.js",
         description:
-          "Desenvolvimento de funcionalidades, integração de APIs REST (como o PagarMe) e modelagem de dados para sistemas de áreas como medicina, financeiro e imobiliário.",
+          "Funcionalidades em produção, integração de APIs REST (como a de pagamentos PagarMe) e modelagem de dados em MySQL, SQL Server e PostgreSQL.",
       },
       {
-        kicker: "Perfil",
-        title: "Analítico, organizado e colaborativo",
+        kicker: "Forma de trabalhar",
+        title: "Requisitos validados e IA com revisão própria",
         description:
-          "Foco em levantamento de requisitos, resolução de problemas, comunicação e trabalho em equipe em ambientes corporativos.",
+          "Cada entrega parte de uma necessidade validada com as áreas envolvidas. Uso IA generativa (Claude) para acelerar o desenvolvimento, sempre com revisão e validação minhas.",
       },
     ],
   },
@@ -67,36 +67,47 @@ const pt = {
     eyebrow: "stack",
     title: "Dois ecossistemas, uma entrega de ponta a ponta.",
     description:
-      "C# e .NET para APIs e regras de negócio; React, Next.js, Node.js e NestJS para interfaces e serviços em JavaScript/TypeScript.",
+      "C# e .NET Core para APIs e regras de negócio; Angular, React, Next.js, Node.js e NestJS para interfaces e serviços em JavaScript.",
     ecosystems: {
       dotnet: {
         name: ".NET & C#",
         tagline: "Backend robusto, tipado e pronto para o ambiente corporativo.",
-        items: ["C#", ".NET Core", "ASP.NET", "Web APIs REST", "Arquitetura MVC"],
+        items: ["C#", ".NET Core", "ASP.NET", "APIs REST", "Arquitetura MVC"],
       },
       js: {
-        name: "JavaScript & TypeScript",
+        name: "Ecossistema JavaScript",
         tagline: "Do servidor Node.js à interface React, com a mesma linguagem.",
-        items: ["React", "Next.js", "Node.js", "NestJS", "TypeScript", "AngularJS"],
+        items: ["React", "Next.js", "Node.js", "NestJS", "AngularJS", "JavaScript"],
       },
     },
     groups: [
       {
-        title: "Dados & Integrações",
-        items: ["MySQL", "SQL", "REST APIs", "PagarMe", "PHP"],
-      },
-      {
-        title: "Fundamentos",
-        items: ["Git", "HTML", "CSS", "C", "C++", "Excel"],
-      },
-      {
-        title: "Competências",
+        title: "Dados",
         items: [
-          "Gestão de Projetos",
+          "MySQL",
+          "SQL Server",
+          "PostgreSQL",
+          "Modelagem de Dados",
+          "Análise de Dados",
+        ],
+      },
+      {
+        title: "Práticas de Engenharia",
+        items: [
+          "Git",
+          "GitHub Actions (CI/CD)",
+          "Scrum / Kanban",
+          "Testes de API e unitários",
+          "IA Generativa (Claude)",
+        ],
+      },
+      {
+        title: "Análise & Também uso",
+        items: [
+          "Análise de Sistemas",
           "Levantamento de Requisitos",
-          "Documentação",
-          "Comunicação",
-          "Inglês avançado",
+          "PHP",
+          "PagarMe API",
         ],
       },
     ],
@@ -106,27 +117,38 @@ const pt = {
     eyebrow: "experiência",
     title: "Trajetória profissional e acadêmica.",
     description:
-      "Do estágio em 2022 até a atuação atual: cargos, responsabilidades e a formação que sustenta meu trabalho.",
+      "Do estágio em 2022 até a atuação atual: cargos, entregas e a formação que sustenta meu trabalho.",
     workLog: "experiencia",
     educationLog: "formacao",
     jobs: [
       {
         period: "Ago 2026 - Atual",
-        title: "Analista de Sistemas e Desenvolvedor PHP - Ideal Imóveis Maringá",
-        description:
-          "Levantamento de requisitos junto às áreas envolvidas, desenvolvimento e atualização de módulos PHP para o sistema da Credbee (plataforma de garantia locatícia) e soluções internas para melhoria contínua do sistema.",
+        title: "Analista de Sistemas e Desenvolvedor PHP",
+        company: "Ideal Imóveis Maringá",
+        highlights: [
+          "Levanto requisitos com as áreas envolvidas antes de cada desenvolvimento no sistema da Credbee (garantia locatícia), garantindo que cada entrega parta de uma necessidade validada.",
+          "Desenvolvo e atualizo módulos em PHP, mantendo a plataforma em evolução contínua.",
+          "Analiso projetos internos e desenvolvo soluções em PHP que sustentam a melhoria contínua do sistema.",
+        ],
       },
       {
         period: "Ago 2024 - Jun 2026",
-        title: "Desenvolvedor Full Stack .NET - Ironbug Sistemas",
-        description:
-          "Desenvolvimento e manutenção de sistemas web corporativos (Facility Imóveis, SendCase e NineSix) com C# (.NET Core) e AngularJS, integração de APIs REST (incluindo PagarMe) e modelagem de dados em MySQL para áreas como medicina, financeiro e imobiliário.",
+        title: "Desenvolvedor Full Stack .NET",
+        company: "Ironbug Sistemas",
+        highlights: [
+          "Entreguei e mantive funcionalidades em C# (.NET Core) e AngularJS em sistemas em produção: Facility Imóveis, NineSix e SendCase, plataforma de consultas virtuais ainda ativa em UBS da região.",
+          "Integrei APIs REST, incluindo a de pagamentos PagarMe, e modelei dados em MySQL para sistemas de medicina, financeiro e imobiliário.",
+          "Corrigi bugs e otimizei a performance das aplicações, melhorando o desempenho dos sistemas e automatizando partes cruciais.",
+        ],
       },
       {
         period: "Mar 2022 - Jul 2024",
-        title: "Estagiário de Ciência da Computação - Ironbug Sistemas",
-        description:
-          "Suporte ao desenvolvimento e manutenção de aplicações web, participando de correções de bugs, testes e implementação de funcionalidades, com aprendizado prático de arquitetura MVC e desenvolvimento fullstack.",
+        title: "Estagiário de Ciência da Computação",
+        company: "Ironbug Sistemas",
+        highlights: [
+          "Apoiei o desenvolvimento e a manutenção de aplicações web, corrigindo bugs, testando e implementando funcionalidades.",
+          "Evoluí de estagiário a Desenvolvedor Full Stack na mesma empresa em 2 anos e 5 meses, aprendendo arquitetura MVC e desenvolvimento full stack na prática.",
+        ],
       },
     ],
     education: [
@@ -134,13 +156,15 @@ const pt = {
         period: "Ago 2021 - Dez 2026",
         title: "Bacharelado em Ciência da Computação",
         institution: "Universidade Estadual de Maringá (UEM)",
-        status: "Cursando",
+        status: "Previsto",
+        note: "TCC voltado à área de Big Data e processamento NoSQL.",
       },
       {
         period: "Mai 2021 - Nov 2023",
         title: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
         institution: "UniCesumar",
         status: "Concluído",
+        note: "",
       },
     ],
   },
@@ -148,37 +172,51 @@ const pt = {
     eyebrow: "atuação",
     title: "Frentes de atuação no desenvolvimento web.",
     description:
-      "Sistemas corporativos em .NET, integrações e dados, e interfaces modernas no ecossistema JavaScript.",
+      "Sistemas corporativos em produção, integrações e dados, e melhoria contínua de performance e qualidade.",
     items: [
       {
         type: "Sistemas corporativos",
-        title: "Desenvolvimento fullstack .NET e PHP",
+        title: "Full stack .NET em produção",
         description:
-          "Construção e manutenção de funcionalidades para sistemas web usados por operações como Facility Imóveis, SendCase, NineSix e Credbee.",
-        stack: ["C#", ".NET", "AngularJS", "PHP"],
+          "Funcionalidades em C# (.NET Core) e AngularJS para Facility Imóveis, NineSix e SendCase, plataforma de consultas virtuais ainda ativa em UBS da região, além de módulos PHP para a Credbee.",
+        stack: ["C#", ".NET Core", "AngularJS", "PHP"],
       },
       {
         type: "Integrações",
         title: "APIs REST e dados",
         description:
-          "Consumo e integração de APIs REST, como o PagarMe, com modelagem e consultas em bancos MySQL para áreas como medicina, financeiro e imobiliário.",
-        stack: ["REST APIs", "MySQL", "SQL"],
+          "Integração de APIs REST, incluindo a de pagamentos PagarMe, e modelagem de dados em MySQL para sistemas de medicina, financeiro e imobiliário.",
+        stack: ["APIs REST", "PagarMe", "MySQL"],
       },
       {
-        type: "Frontend moderno",
-        title: "Interfaces com React e Next.js",
+        type: "Qualidade e performance",
+        title: "Otimização e automação",
         description:
-          "Interfaces componentizadas em React e Next.js, apoiadas por APIs em Node.js/NestJS, além de correção de bugs, melhoria de performance e evolução contínua de módulos.",
-        stack: ["React", "Next.js", "Node.js", "NestJS"],
+          "Correção de bugs, otimização de performance e automação de partes cruciais dos sistemas, com testes de API e unitários e requisitos validados antes de cada entrega.",
+        stack: ["Git", "GitHub Actions", "Testes", "Scrum"],
       },
     ],
   },
   personalProjects: {
-    eyebrow: "projetos pessoais",
-    title: "Meus repositórios em destaque no GitHub.",
+    eyebrow: "projetos",
+    title: "Projetos pessoais e repositórios em destaque.",
     description:
-      "Projetos próprios que marco com estrela no GitHub: uma vitrine que atualizo direto por lá, sem precisar mexer no site.",
+      "O que construo fora do trabalho, mais os repositórios que marco com estrela no GitHub, que atualizam o site sozinhos.",
     noDescription: "Repositório sem descrição.",
+    featured: {
+      badge: "Projeto em destaque",
+      name: "Sonalytics",
+      period: "Ago 2026 - Atual",
+      highlights: [
+        "Aplicação web de análise do meu histórico de audição no Spotify, com dashboard completo, insights e relatórios no estilo Wrapped.",
+        "Desenvolvida com Next.js (React) e Node.js e publicada na Vercel, usando IA generativa como apoio e mantendo arquitetura e validação sob minha responsabilidade.",
+      ],
+      stack: ["Next.js", "React", "Node.js", "Vercel"],
+      siteLabel: "Ver online",
+      siteHref: "https://sonalytics.vercel.app",
+      repoLabel: "Código",
+      repoHref: "https://github.com/NotHamada/Sonalytics",
+    },
     fallback: [
       {
         title: "F1Statistics",
@@ -191,9 +229,9 @@ const pt = {
   },
   achievements: {
     eyebrow: "conquistas",
-    title: "Reconhecimento, idiomas e interesses.",
+    title: "Reconhecimento, idiomas e voluntariado.",
     description:
-      "Um prêmio recente, os idiomas que uso no dia a dia e alguns interesses que também fazem parte de quem eu sou.",
+      "Um prêmio recente, os idiomas que uso no dia a dia e minha atuação voluntária fora da tecnologia.",
     items: [
       {
         title: "2º lugar — Hackathon SECOMP by Elotech 2024",
@@ -206,13 +244,17 @@ const pt = {
       { language: "Português", level: "Nativo" },
       { language: "Inglês", level: "Avançado" },
     ],
-    interestsLabel: "Interesses",
-    interests: [
-      "Leitura",
-      "Esportes",
-      "Colecionar TCGs",
-      "Conversar sobre temas variados",
-    ],
+    volunteer: {
+      label: "Atuação voluntária",
+      role: "1º Secretário",
+      organization:
+        "FMECH — Federação das Mocidades Evangélicas Holiness (3ª Região)",
+      period: "Abr 2026 - Atual",
+      highlights: [
+        "Centralizo a comunicação entre a diretoria e os coordenadores de 5 mocidades locais (Assaí, Curitiba, Londrina, Maringá e Paranaguá), mantendo atualizada a base de contatos institucionais.",
+        "Organizo os documentos e registros administrativos da federação e apoio o planejamento de atividades e eventos.",
+      ],
+    },
   },
   contact: {
     terminalTitle: "bash — contato",
@@ -220,7 +262,7 @@ const pt = {
     titleStart: "Vamos construir algo",
     titleHighlight: "com impacto?",
     description:
-      "Estou aberto a oportunidades e conversas sobre desenvolvimento fullstack com .NET, React, Next.js, Node.js e NestJS, sistemas corporativos e integrações.",
+      "Estou aberto a oportunidades e conversas sobre desenvolvimento full stack com .NET, Angular, React, Next.js, Node.js e NestJS, sistemas corporativos e integrações.",
   },
   footer: {
     builtWith: "feito com",

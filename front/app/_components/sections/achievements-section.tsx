@@ -1,7 +1,7 @@
 import type { Dictionary } from "../../_i18n/dictionaries/pt";
 import { Reveal } from "../reveal";
 import { SectionHeading } from "../section-heading";
-import { FaComments, FaLanguage, FaTrophy } from "react-icons/fa6";
+import { FaHandshakeAngle, FaLanguage, FaTrophy } from "react-icons/fa6";
 
 export function AchievementsSection({
   dict,
@@ -71,16 +71,27 @@ export function AchievementsSection({
           <Reveal delay={200} direction="right" className="lg:col-span-2">
             <article className="card h-full p-7">
               <p className="flex items-center gap-2 font-mono text-sm text-muted">
-                <FaComments className="text-lg text-dotnet" aria-hidden />{" "}
-                {dict.interestsLabel}
+                <FaHandshakeAngle className="text-lg text-dotnet" aria-hidden />{" "}
+                {dict.volunteer.label}
               </p>
-              <ul className="mt-5 flex flex-wrap gap-2.5">
-                {dict.interests.map((interest) => (
+              <div className="mt-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 className="font-display text-xl font-bold text-fg">
+                  {dict.volunteer.role}
+                </h3>
+                <span className="font-mono text-xs text-dotnet">
+                  {dict.volunteer.period}
+                </span>
+              </div>
+              <p className="mt-1 text-sm font-medium text-fg/70">
+                {dict.volunteer.organization}
+              </p>
+              <ul className="mt-4 space-y-2">
+                {dict.volunteer.highlights.map((highlight) => (
                   <li
-                    key={interest}
-                    className="rounded-lg border border-line px-4 py-2 text-sm text-fg/90"
+                    key={highlight}
+                    className="relative pl-4 leading-7 text-muted before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-line"
                   >
-                    {interest}
+                    {highlight}
                   </li>
                 ))}
               </ul>

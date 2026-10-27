@@ -5,7 +5,8 @@ import { SectionHeading } from "../section-heading";
 type TimelineItem = {
   period: string;
   title: string;
-  body: string;
+  subtitle: string;
+  highlights: string[];
   badge?: string;
 };
 
@@ -48,7 +49,21 @@ function Timeline({
               <h4 className="mt-2 font-display text-xl font-bold text-fg">
                 {item.title}
               </h4>
-              <p className="mt-2 leading-7 text-muted">{item.body}</p>
+              <p className="mt-1 text-sm font-medium text-fg/70">
+                {item.subtitle}
+              </p>
+              {item.highlights.length > 0 && (
+                <ul className="mt-3 space-y-2">
+                  {item.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="relative pl-4 leading-7 text-muted before:absolute before:left-0 before:top-[0.7em] before:h-1 before:w-1 before:rounded-full before:bg-line"
+                    >
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </Reveal>
           </li>
         ))}
@@ -80,7 +95,8 @@ export function ExperienceSection({
             items={dict.jobs.map((item) => ({
               period: item.period,
               title: item.title,
-              body: item.description,
+              subtitle: item.company,
+              highlights: item.highlights,
             }))}
           />
           <Timeline
@@ -89,7 +105,8 @@ export function ExperienceSection({
             items={dict.education.map((item) => ({
               period: item.period,
               title: item.title,
-              body: item.institution,
+              subtitle: item.institution,
+              highlights: item.note ? [item.note] : [],
               badge: item.status,
             }))}
           />
